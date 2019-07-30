@@ -17,4 +17,4 @@ phases:
         - mv target/deploy ./
 artifacts:
   files:
-    - deploy/**/*
+    - target/deploy/**/*
