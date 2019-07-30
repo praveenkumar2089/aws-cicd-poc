@@ -11,6 +11,7 @@ phases:
       commands:
         - echo "Entered build phase"
         - mvn clean prepare-package war:exploded
+        - echo $CODEBUILD_SRC_DIR
     post_build:
       commands:
         - ls
