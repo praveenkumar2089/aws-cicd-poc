@@ -1,3 +1,4 @@
+
 version: 0.2
 phases:
   install:
@@ -5,14 +6,14 @@ phases:
       java: openjdk8
   pre_build:
     commands:
-      - echo "pre build is happening"
+      - echo "Entered the pre-build phase"
     build:
       commands:
-        - echo "buils is happeing"
-        - mvn clean prepare-package  war:exploded
+        - echo "Entered build phase"
+        - mvn clean prepare-package war:exploded
     post_build:
       commands:
-        - echo "post build is happening"
+        - echo "Entered the post-build phase"
         - mv target/deploy ./
 artifacts:
   files:
