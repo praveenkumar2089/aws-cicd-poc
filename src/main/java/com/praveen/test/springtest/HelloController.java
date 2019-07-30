@@ -1,4 +1,5 @@
 package com.praveen.test.springtest;
+
 import org.springframework.web.bind.annotation.*;
 
 @RequestMapping("/hello")
@@ -6,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 public class HelloController {
 
   @GetMapping
-  public String hello() { return "hi Hello";}
-
+  public String hello() {
+    return "hi praveen welcome - app is running ";
+  }
 }
