@@ -1,0 +1,16 @@
+version: 2.0
+phases:
+  pre_build:
+    commands:
+      - echo "pre build is happening"
+    build:
+      commands:
+        - echo "buils is happeing"
+        - mvn clean prepare-package war:exploded
+    post_build:
+      commands:
+        - echo "post build is happening"
+        - mv target/deploy ./
+artifacts:
+  files:
+    -deploy/**/*
