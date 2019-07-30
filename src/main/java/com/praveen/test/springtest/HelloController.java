@@ -1,12 +1,12 @@
 package com.praveen.test.springtest;
 
-import org.springframework.web.bind.annotation.*;
 
-@RequestMapping("/hello")
-@RestController
+
+@org.springframework.web.bind.annotation.RequestMapping("/hello")
+@org.springframework.web.bind.annotation.RestController
 public class HelloController {
 
-  @GetMapping
+  @org.springframework.web.bind.annotation.GetMapping
   public String hello() {
     return "hi praveen welcome - app is running ";
   }
