@@ -7,17 +7,17 @@ phases:
   pre_build:
     commands:
       - echo "Entered the pre-build phase"
-    build:
-      commands:
-        - echo "Entered build phase"
-        - mvn clean prepare-package war:exploded
-        - echo $CODEBUILD_SRC_DIR
-    post_build:
-      commands:
-        - ls
-        - echo "Entered the post-build phase"
-        - mv target/deploy ./
-        - ls
-artifacts:
-  files:
-    - deploy/**/*
+  build:
+    commands:
+      - echo "Entered build phase"
+      - mvn clean prepare-package war:exploded
+      - echo $CODEBUILD_SRC_DIR
+  post_build:
+    commands:
+      - ls
+      - echo "Entered the post-build phase"
+      - mv target/deploy ./
+      - ls
+  artifacts:
+    files:
+      - deploy/**/*
