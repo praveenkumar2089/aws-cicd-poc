@@ -6,7 +6,7 @@ phases:
     build:
       commands:
         - echo "buils is happeing"
-        - mvn clean prepare-package war:exploded
+        - mvn clean prepare-package  war:exploded
     post_build:
       commands:
         - echo "post build is happening"
